@@ -37,11 +37,11 @@ GIF created with [Recordit](http://recordit.co/).
 
 ## Notes
 
-*This is just the initial commit, I plan on refactoring the code and finishing more of the optional user stories.* 
+**This is just the initial commit, I plan on refactoring the code and finishing more of the optional user stories.**
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Robbie dela Victoria]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
