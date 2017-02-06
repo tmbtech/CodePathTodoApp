@@ -1,7 +1,9 @@
 package com.delavictoria.codepathtodoapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,9 +37,23 @@ public class MainActivity extends AppCompatActivity {
         lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                todoItems.remove(position);
-                aToDoAdapter.notifyDataSetChanged();
-                writeItems();
+                final int _position = position;
+                new AlertDialog
+                        .Builder(MainActivity.this)
+                        .setTitle("Delete")
+                        .setMessage("Are you sure you would like to delete this item?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                todoItems.remove(_position);
+                                aToDoAdapter.notifyDataSetChanged();
+                                writeItems();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null)
+                        .show();
+
                 return true;
             }
         });
