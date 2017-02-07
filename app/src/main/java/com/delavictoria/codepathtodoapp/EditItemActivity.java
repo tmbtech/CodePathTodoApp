@@ -15,7 +15,7 @@ public class EditItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_item);
 
         String value = getIntent().getStringExtra("value");
-        position = getIntent().getIntExtra("position", -1);
+        position = getIntent().getIntExtra("id", -1);
 
         EditText editItem = (EditText) findViewById(R.id.etEditItem);
         editItem.requestFocus();
@@ -28,7 +28,7 @@ public class EditItemActivity extends AppCompatActivity {
         String value =  editItem.getText().toString();
         Intent intent = new Intent();
         intent.putExtra("value", value);
-        intent.putExtra("position", position);
+        intent.putExtra("id", position);
 
         setResult(RESULT_OK, intent);
         this.finish();

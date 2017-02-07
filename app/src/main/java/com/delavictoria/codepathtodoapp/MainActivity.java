@@ -1,121 +1,52 @@
 package com.delavictoria.codepathtodoapp;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import org.apache.commons.io.FileUtils;
+import com.delavictoria.codepathtodoapp.adapters.TodosAdapter;
+import com.delavictoria.codepathtodoapp.models.Todo;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private final int REQUEST_CODE = 20;
-
-    ArrayList<String> todoItems;
-    ArrayAdapter<String> aToDoAdapter;
-    ListView lvItems;
-    EditText etEditText;
+    TodosAdapter aTodoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        populateArrayItems();
 
-        lvItems = (ListView) findViewById(R.id.lvItems);
-        lvItems.setAdapter(aToDoAdapter);
-        lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                final int _position = position;
-                new AlertDialog
-                        .Builder(MainActivity.this)
-                        .setTitle("Delete")
-                        .setMessage("Are you sure you would like to delete this item?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+        List<Todo> todos = SQLite
+                .select()
+                .from(Todo.class)
+                .queryList();
 
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                todoItems.remove(_position);
-                                aToDoAdapter.notifyDataSetChanged();
-                                writeItems();
-                            }
-                        })
-                        .setNegativeButton(android.R.string.no, null)
-                        .show();
+        aTodoAdapter = new TodosAdapter(this, todos);
 
-                return true;
-            }
-        });
-
-        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView textView = (TextView) view;
-                launchEditView(textView.getText().toString(), position);
-            }
-        });
-
-        etEditText = (EditText) findViewById(R.id.etEditText);
-    }
-
-    public void populateArrayItems() {
-        readItems();
-        aToDoAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todoItems);
-    }
-
-    public void onAddItem(View view) {
-        aToDoAdapter.add(etEditText.getText().toString());
-        etEditText.setText("");
-        writeItems();
-    }
-
-    public void launchEditView(String value, int position) {
-        Intent intent = new Intent(this, EditItemActivity.class);
-        intent.putExtra("value", value);
-        intent.putExtra("position", position);
-        startActivityForResult(intent, REQUEST_CODE);
-    }
-
-    private void readItems() {
-        File filesDir = getFilesDir();
-        File file = new File(filesDir, "todo.txt");
-        try {
-            todoItems = new ArrayList<String>(FileUtils.readLines(file));
-        } catch (IOException e) {
-            todoItems = new ArrayList<String>();
-        }
-    }
-
-    private void writeItems() {
-        File filesDir = getFilesDir();
-        File file = new File(filesDir, "todo.txt");
-        try {
-            FileUtils.writeLines(file, todoItems);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ListView lvItems = (ListView) findViewById(R.id.lvItems);
+        lvItems.setAdapter(aTodoAdapter);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
-            String editedValue = data.getExtras().getString("value");
-            int position = data.getExtras().getInt("position", -0);
-
-            todoItems.set(position, editedValue);
-            aToDoAdapter.notifyDataSetChanged();
-            writeItems();
-        }
+        aTodoAdapter.onActivityResult(requestCode, resultCode, data);
     }
+
+    public void onClickAdd(View view) {
+
+        EditText etEditText = (EditText) findViewById(R.id.etEditText);
+        String value = etEditText.getText().toString();
+        etEditText.setText("");
+
+        Todo todo = new Todo();
+        todo.setName(value);
+
+        aTodoAdapter.add(todo);
+    }
+
 }
