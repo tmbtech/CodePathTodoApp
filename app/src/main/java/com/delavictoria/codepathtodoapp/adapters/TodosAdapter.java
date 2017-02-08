@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.delavictoria.codepathtodoapp.EditItemActivity;
 import com.delavictoria.codepathtodoapp.R;
 import com.delavictoria.codepathtodoapp.models.Todo;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.List;
 
@@ -28,6 +29,18 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
         super(context, 0, todos);
         this.todos = todos;
         this.context = context;
+    }
+
+    private void refreshTodos () {
+        List<Todo> todos = SQLite
+                .select()
+                .from(Todo.class)
+                .queryList();
+
+        this.todos.clear();
+        this.todos.addAll(todos);
+
+        notifyDataSetChanged();
     }
 
     @Override
@@ -65,8 +78,7 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
                                 todo.delete();
 
                                 // update view
-                                todos.remove(todo.getId());
-                                notifyDataSetChanged();
+                                refreshTodos();
                             }
                         })
                         .setNegativeButton(android.R.string.no, null)
@@ -93,7 +105,6 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
         return convertView;
     }
 
-
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             int id = data.getExtras().getInt("id", -0);
@@ -106,8 +117,7 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
             todo.save();
 
             // update view
-            todos.set(id, todo);
-            notifyDataSetChanged();
+            refreshTodos();
         }
     }
 }
