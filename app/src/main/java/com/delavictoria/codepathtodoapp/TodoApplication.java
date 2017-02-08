@@ -18,7 +18,6 @@ public class TodoApplication extends Application {
                         .build()
         );
 
-//        FlowLog.setMinimumLoggingLevel(FlowLog.Level.V);
         Stetho.initializeWithDefaults(this);
     }
 }
