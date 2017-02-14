@@ -4,7 +4,8 @@ Simple To-Do is an android app that allows building a todo list and basic todo i
 
 Submitted by: Robbie dela Victoria
 
-Time spent: 10 hours 
+Time spent: 10-12 hours
+
 ## User Stories
 
 The following **required** functionality is completed:
@@ -16,7 +17,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] Persist the todo items [into SQLite](http://guides.codepath.com/android/Persisting-Data-to-the-Device#sqlite) using DBFlow instead of a text file
-* [ ] Improve style of the todo items in the list [using a custom adapter](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView)
+* [x] Improve style of the todo items in the list [using a custom adapter](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView)
 * [ ] Add support for completion due dates for todo items (and display within listview item)
 * [ ] Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity for editing items
 * [ ] Add support for selecting the priority of each todo item (and display in listview item)
@@ -30,13 +31,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/3loIbc9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/YEpsoWQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Recordit](http://recordit.co/).
 
-## Notes
+Launcher Icon made by [Freepik](www.flaticon.com).
 
-**This is just the initial commit, I plan on refactoring the code and finishing more of the optional user stories.**
 
 ## License
 

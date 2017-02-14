@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Code Path To Do App</string>
+    <string name="app_name">Simple To-Do</string>
     <string name="add">Add</string>
     <string name="addItem">Add A New Item…</string>
     <string name="editSave">Save</string>
     <string name="editTextHeading">Edit Item Below:</string>
+    <string name="priority">Priority:</string>
 </resources>
