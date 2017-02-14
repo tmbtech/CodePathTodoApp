@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,23 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
         tvItemName.setTag(todo);
         tvItemName.setText(todo.getName());
 
+        TextView tvPrioirty = (TextView) convertView.findViewById(R.id.tvPriority);
+        int priority = todo.getPriority();
+
+        String priorityText = "high";
+        int color = R.color.colorAccent;
+
+        if(priority == 1){
+            priorityText = "low";
+            color = R.color.colorPrimary;
+        }else if(priority == 2) {
+            priorityText = "medium";
+            color = R.color.colorPrimaryDark;
+        }
+
+        tvPrioirty.setText(priorityText);
+        tvPrioirty.setTextColor(ContextCompat.getColor(context, color));
+
         convertView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(final View view) {
@@ -97,6 +115,7 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
                 Intent intent = new Intent(context, EditItemActivity.class);
                 intent.putExtra("value", todo.getName());
                 intent.putExtra("id", todo.getId());
+                intent.putExtra("priority", todo.getPriority());
                 ((Activity) context).startActivityForResult(intent, REQUEST_CODE);
             }
         });
@@ -109,11 +128,13 @@ public class TodosAdapter extends ArrayAdapter<Todo> {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             int id = data.getExtras().getInt("id", -0);
             String editedValue = data.getExtras().getString("value");
+            int priority = data.getExtras().getInt("priority");
 
             // save to database
             Todo todo = new Todo();
             todo.setId(id);
             todo.setName(editedValue);
+            todo.setPriority(priority);
             todo.save();
 
             // update view

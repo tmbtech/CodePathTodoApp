@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         Todo todo = new Todo();
         todo.setName(value);
+        todo.setPriority(1);
 
         aTodoAdapter.add(todo);
     }
