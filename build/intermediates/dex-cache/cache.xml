@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_c6b591a2fd6533f027ad73b941f82f9fe8a1277f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_9ca5b8d115114f8130b0c9f16d7e12066884b754.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/commons-io-2.4_db9d9c7f5dc9abc44c05f9a56b43532b2a4af315.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_c306ea694fafb8867c50adf31197e9f87ce1b1bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_2c9f6f2a1ca3c3e1491655e45bc4053cc496a2ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_71488720539995a72e8a6b6d59e73f3386b0816f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_93444d9e8336591e3a09a0dcd8d667cde0c86872.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.facebook.stetho/stetho/1.4.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26b6f0185cbba8917ba9d9d0bd170f95311622ab">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.facebook.stetho-stetho-1.4.1_d4ee6f57dc3c9d175fc30958498b2fdf56f59cd9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_6e8843c2b0ee14e91241e2ce9e532af88d499ca4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/commons-cli-1.2_049f55292c097e14ebaec009d6cecd6d140f20ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/.gradle/caches/modules-2/files-2.1/com.github.Raizlabs.DBFlow/dbflow-core/3.1.1/f205bcc63da15f536f333e1c82de622fdbb35956/dbflow-core-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f205bcc63da15f536f333e1c82de622fdbb35956">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/dbflow-core-3.1.1_989f8543e51d83a80ce72bb2d37fd290d7e07ed2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_e4643416f72415951b495e60a51674837e1afc4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.github.Raizlabs.DBFlow/dbflow/3.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="58342b97007b49e4a536bdd30b9c3928be81ae59">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.github.Raizlabs.DBFlow-dbflow-3.1.1_00711f1d727d2c096c794dcd2089ff81e11ced32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_57c7aa3cae561329daa0e19b6005e1e76e606b47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_6091fb01cbe29135535c62b2dc6c938bfbd5b8ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/robbiekaze/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/robbiekaze/GitHub/CodePathTodoApp/app/build/intermediates/pre-dexed/debug/jsr305-2.0.1_7637c23790a28f7ea317155e1182c11efe5c6d12.jar" />
+    </item>
+
+</items>
